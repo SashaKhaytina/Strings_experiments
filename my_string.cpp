@@ -20,16 +20,13 @@ struct String
 
 
 String new_str(int size); // С вводом или без? Если без, тогда добавление (начальное) только циклом через getchar()
-//void print_str(char* the_string);
+
 void print_str(const String str_1);
 void clear_buffer();
-//bool add_elem(char elem, char** the_string, int* str_size);
 bool add_elem(char elem, String* str_1);
-//bool pop_elem(char** the_string, int* str_size);
 bool pop_elem(String* str_1);
 
 // bool sum_str();
-//iuhiuh
 
 
 int main()
@@ -39,12 +36,6 @@ int main()
     int str_size = 0;
     scanf("%d", &str_size);
     str_size++;
-
-    // char* the_string = (char*) calloc(str_size, sizeof(char));
-    // if (the_string == NULL)
-    // {
-    //     printf("Неудалось выделить память заданного размера\n");
-    // }
 
     String str_1 = new_str(str_size);
     clear_buffer();
@@ -121,7 +112,6 @@ bool add_elem(char elem, String* str_1)
     ((*str_1).size)++;
 
     return true;
-
 }
 
 
@@ -135,7 +125,6 @@ bool pop_elem(String* str_1)
     ((*str_1).size)--;
 
     return true;
-
 }
 
 
